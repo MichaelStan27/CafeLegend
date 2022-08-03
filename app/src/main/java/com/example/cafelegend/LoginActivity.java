@@ -59,7 +59,8 @@ public class LoginActivity extends AppCompatActivity {
                 errorTV.setVisibility(View.VISIBLE);
                 Utility.setTimeout(() -> errorTV.setVisibility(View.INVISIBLE), 2000);
             } else {
-                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
             }
 
         });
