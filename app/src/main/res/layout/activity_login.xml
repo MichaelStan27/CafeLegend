@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--  2 Circles on the top  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-100dp"
+        >
+
+        <View
+            android:background="@drawable/brown_circle"
+            android:layout_height="400dp"
+            android:layout_width="400dp"
+            android:layout_marginTop="-200dp"
+            android:layout_marginStart="-80dp"
+            />
+
+        <View
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="-240dp"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/yellow_circle" />
+
+    </RelativeLayout>
+
+    <!--    Application Logo-->
+    <ImageView
+        android:contentDescription="@string/application_logo"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/errorMsg_tv"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:background="#FFFFCF"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:layout_marginVertical="5dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="30dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            />
+
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:autofillHints="Username"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:autofillHints="Password"
+            />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#8B4717"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/login"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

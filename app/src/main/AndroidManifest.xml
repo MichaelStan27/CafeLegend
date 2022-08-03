@@ -8,7 +8,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.CafeLegend">
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
