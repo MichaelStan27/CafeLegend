@@ -8,11 +8,48 @@
     android:gravity="center"
     tools:context=".HomeActivity">
 
+
+    <!--    Top section    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-340dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/pink_rectangle"
+            android:padding="10dp"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/home"
+            android:textAlignment="center"
+            android:textColor="#634848"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
     <TextView
+        android:id="@+id/greeting_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text="Hello home"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textColor="#634848"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/border"
         />
+
 
 </LinearLayout>

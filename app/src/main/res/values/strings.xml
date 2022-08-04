@@ -4,4 +4,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="application_logo">Application logo</string>
+    <string name="home">Home</string>
+    <string name="welcome">Welcome,</string>
 </resources>
