@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                 Utility.setTimeout(() -> errorTV.setVisibility(View.INVISIBLE), 2000);
             } else {
                 Intent intent = new Intent(this, HomeActivity.class);
+                intent.putExtra("username", username);
                 startActivity(intent);
             }
 
