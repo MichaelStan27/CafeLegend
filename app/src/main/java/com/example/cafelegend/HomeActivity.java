@@ -72,16 +72,19 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()){
             case R.id.items:
                 Intent items = new Intent(this, ItemsActivity.class);
+                items.putExtra("username", username);
                 startActivity(items);
                 break;
 
             case R.id.find_us:
                 Intent find_us = new Intent(this, FindUsActivity.class);
+                find_us.putExtra("username", username);
                 startActivity(find_us);
                 break;
 
             case R.id.logout:
                 Intent login = new Intent(this, LoginActivity.class);
+                login.putExtra("username", username);
                 startActivity(login);
                 break;
         }
