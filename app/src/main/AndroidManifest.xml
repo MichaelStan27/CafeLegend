@@ -8,6 +8,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.CafeLegend">
+        <activity android:name=".FindUsActivity"></activity>
+        <activity android:name=".ItemsActivity" />
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".LoginActivity"
