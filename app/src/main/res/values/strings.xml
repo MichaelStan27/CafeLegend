@@ -6,4 +6,9 @@
     <string name="application_logo">Application logo</string>
     <string name="home">Home</string>
     <string name="welcome">Welcome,</string>
+    <string name="items">Items</string>
+    <string name="find_us">Find Us</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="logout">Logout</string>
 </resources>
