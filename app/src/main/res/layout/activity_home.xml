@@ -29,13 +29,14 @@
                 />
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
                 android:text="@string/home"
                 android:textColor="#634848"
-                android:textSize="25sp"
+                android:paddingTop="8dp"
+                android:textSize="35sp"
                 android:textStyle="bold"
-                android:paddingStart="85dp"/>
+                android:paddingStart="70dp"/>
         </LinearLayout>
 
         <TextView
@@ -46,9 +47,10 @@
             android:textAlignment="center"
             android:textColor="#634848"
             android:textStyle="bold|italic"
-            android:textSize="18sp"
+            android:textSize="23sp"
             android:paddingVertical="10dp"
             android:paddingHorizontal="10dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/border"
             android:gravity="center"
             android:layout_gravity="center"
