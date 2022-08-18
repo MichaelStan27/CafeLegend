@@ -1,4 +1,4 @@
-package com.example.cafelegend.Utils;
+package com.example.cafelegend.utils;
 
 import android.util.Log;
 

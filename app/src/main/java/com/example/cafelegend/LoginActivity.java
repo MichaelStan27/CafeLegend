@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.cafelegend.Utils.Utility;
+import com.example.cafelegend.utils.Utility;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -62,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, HomeActivity.class);
                 intent.putExtra("username", username);
                 startActivity(intent);
+                finish();
             }
 
         });

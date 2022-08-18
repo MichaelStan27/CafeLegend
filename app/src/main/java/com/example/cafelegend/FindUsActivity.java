@@ -82,6 +82,7 @@ public class FindUsActivity extends AppCompatActivity implements NavigationView.
                 Intent login = new Intent(this, LoginActivity.class);
                 login.putExtra("username", username);
                 startActivity(login);
+                finish();
                 break;
         }
         return false;

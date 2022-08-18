@@ -86,6 +86,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Intent login = new Intent(this, LoginActivity.class);
                 login.putExtra("username", username);
                 startActivity(login);
+                finish();
                 break;
         }
         return false;
