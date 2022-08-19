@@ -63,9 +63,11 @@ public class MainCourseFragment extends Fragment {
 
     void loadFoodData(){
         foodVector = new Vector<>();
-        foodVector.add(new Food("Main Course 1", 12000, R.drawable.ic_home));
-        foodVector.add(new Food("Main Course 2", 15000, R.drawable.ic_home));
-        foodVector.add(new Food("Main Course 3", 18000, R.drawable.ic_home));
+        foodVector.add(new Food("Furikake Salmon", 35000, R.drawable.furikake, "Furikake Salmon is a delicious and healthy recipe where salmon fillets are coated with a layer of Furikake seasoning."));
+        foodVector.add(new Food("Thai Pumpkin Curry", 30000, R.drawable.thai, "Make this spicy Thai Pumpkin Curry in under 20 minutes for your weeknight dinner."));
+        foodVector.add(new Food("Air Fryer Salmon", 29000, R.drawable.air, "This air fryer salmon is tender, juicy, and perfectly seasoned."));
+        foodVector.add(new Food("Chicken Curry", 40000, R.drawable.chicken, "Love the chicken curry that is served at the Indian restaurants? Then try my super easy recipe which is made using basic ingredients."));
+        foodVector.add(new Food("Hibachi Chicken", 25000, R.drawable.hibachi, "This Japanese steakhouse-style Hibachi Chicken makes for a quick, easy, and super- delicious dinner."));
     }
 
     @Override

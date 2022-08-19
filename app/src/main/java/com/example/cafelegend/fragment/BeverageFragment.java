@@ -63,11 +63,11 @@ public class BeverageFragment extends Fragment {
 
     void loadFoodData(){
         foodVector = new Vector<>();
-        foodVector.add(new Food("Affogato", 30000, R.drawable.affogato_0));
-        foodVector.add(new Food("Americano", 30000, R.drawable.americano));
-        foodVector.add(new Food("Caffé Latte", 25000, R.drawable.cafe_late));
-        foodVector.add(new Food("Caffé Mocha", 27000, R.drawable.cafe_mocha));
-        foodVector.add(new Food("Cappucino", 27000, R.drawable.cappuccino_0));
+        foodVector.add(new Food("Affogato", 30000, R.drawable.affogato_0, "Espresso poured on a vanilla ice cream. Served in a cappuccino cup."));
+        foodVector.add(new Food("Americano", 30000, R.drawable.americano, "Espresso with added hot water (100–150 ml). Often served in a cappuccino cup."));
+        foodVector.add(new Food("Caffé Latte", 25000, R.drawable.cafe_late, "A tall, mild 'milk coffee' (about 150-300 ml). An espresso with steamed milk."));
+        foodVector.add(new Food("Caffé Mocha", 27000, R.drawable.cafe_mocha, "A caffè latte with chocolate and whipped cream, made by pouring about 2 cl of chocolate."));
+        foodVector.add(new Food("Cappucino", 27000, R.drawable.cappuccino_0, "A coffee drink consisting of espresso and a milk foam mixture (drink size about 160–240 ml)."));
     }
 
     @Override

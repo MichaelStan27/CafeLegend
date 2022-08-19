@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     //    Carousel
     ViewPager carouselVP;
-    int images[] = {R.drawable.logo, R.drawable.logo, R.drawable.logo};
+    int images[] = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4, R.drawable.img5};
     int carouselCounter = 0;
     ImageButton carouselNextBtn, carouselPrevBtn;
 
