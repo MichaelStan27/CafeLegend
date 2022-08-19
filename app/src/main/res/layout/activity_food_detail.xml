@@ -54,7 +54,7 @@
             android:id="@+id/foodInfoLL"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="@drawable/large_pink_rectangle"
+            android:background="@drawable/large_rectangle"
             android:orientation="vertical"
             android:paddingTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:textColor="#741414"
-                    android:textSize="22sp"
+                    android:textSize="25sp"
                     android:text="Beef Pizza"
                     android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
                     android:textAlignment="textEnd"
                     android:text="Rp. 45.000"
                     android:textColor="#594f4f"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
 
@@ -106,6 +106,7 @@
                 android:text="qty"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
                 android:textStyle="bold"
                 android:textSize="17sp"
                 android:textColor="#594E4E"/>
@@ -117,6 +118,7 @@
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:inputType="number"
+                android:background="@drawable/border"
                 />
 
             <Button

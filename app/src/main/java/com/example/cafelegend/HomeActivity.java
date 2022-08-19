@@ -83,7 +83,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             public void run() {
                 handler.post(update);
             }
-        },2500,2500);
+        },5000,5000);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
