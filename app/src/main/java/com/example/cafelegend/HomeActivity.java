@@ -5,15 +5,22 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.cafelegend.adapter.CarouselAdapter;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -23,7 +30,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
 
+    //    Carousel
+    ViewPager carouselVP;
+    int images[] = {R.drawable.logo, R.drawable.logo, R.drawable.logo};
+    int carouselCounter = 0;
+    ImageButton carouselNextBtn, carouselPrevBtn;
+
     void init(){
+        carouselVP = findViewById(R.id.carouselVP);
+        carouselVP.setAdapter(new CarouselAdapter(images, this));
+        carouselNextBtn = findViewById(R.id.nextCarouselIB);
+        carouselPrevBtn = findViewById(R.id.prevCarouselIB);
+
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav);
         toolbar = findViewById(R.id.toolbar);
@@ -43,12 +61,41 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    void carouselChangeImg(int factor){
+        carouselCounter += factor;
+        if (carouselCounter == images.length){
+            carouselCounter = 0 ;
+        } else if (carouselCounter < 0){
+            carouselCounter = images.length -1;
+        }
+
+        carouselVP.setCurrentItem(carouselCounter,true);
+    }
+
+    void carouselUpdater(){
+        //auto change image
+        final Handler handler = new Handler();
+        final Runnable update  = () -> carouselChangeImg(1);
+
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(update);
+            }
+        },2500,2500);
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         init();
         setupDrawer();
+        carouselUpdater();
+
+        carouselNextBtn.setOnClickListener((v) -> carouselChangeImg(1));
+        carouselPrevBtn.setOnClickListener((v) -> carouselChangeImg(-1));
 
         greetingET.append(" " + username + "!");
     }

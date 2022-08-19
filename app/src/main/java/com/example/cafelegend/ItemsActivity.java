@@ -45,7 +45,6 @@ public class ItemsActivity extends AppCompatActivity implements NavigationView.O
             }
         });
 
-
         tabLayout.addTab(tabLayout.newTab().setText("Appetizer"));
         tabLayout.addTab(tabLayout.newTab().setText("Main Course"));
         tabLayout.addTab(tabLayout.newTab().setText("Beverage"));
@@ -71,6 +70,8 @@ public class ItemsActivity extends AppCompatActivity implements NavigationView.O
         if  (extras != null) {
             username = extras.getString("username");
         }
+
+        adapter.setUsername(username);
     }
 
     void setupDrawer(){

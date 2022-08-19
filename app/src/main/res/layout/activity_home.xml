@@ -10,7 +10,6 @@
     android:id="@+id/drawerLayout"
     tools:openDrawer="start">
 
-
     <!--    Top section    -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,22 +38,76 @@
                 android:paddingStart="70dp"/>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/greeting_et"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:textAlignment="center"
-            android:textColor="#634848"
-            android:textStyle="bold|italic"
-            android:textSize="23sp"
-            android:paddingVertical="10dp"
-            android:paddingHorizontal="10dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/border"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             android:gravity="center"
-            android:layout_gravity="center"
-            />
+            android:layout_marginBottom="130dp"
+            >
+
+            <TextView
+                android:id="@+id/greeting_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textColor="#634848"
+                android:textStyle="bold|italic"
+                android:textSize="23sp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="12dp"
+                >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_centerInParent="true"
+                    android:id="@+id/carouselVP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/prevCarouselIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_back"
+                        android:background="?android:selectableItemBackground"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/nextCarouselIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_back"
+                        android:rotation="180"
+                        android:background="?android:selectableItemBackground"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
