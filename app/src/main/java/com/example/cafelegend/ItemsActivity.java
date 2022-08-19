@@ -114,9 +114,9 @@ public class ItemsActivity extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.find_us:
-                Intent items = new Intent(this, FindUsActivity.class);
-                items.putExtra("username", username);
-                startActivity(items);
+                Intent findUs = new Intent(this, FindUsActivity.class);
+                findUs.putExtra("username", username);
+                startActivity(findUs);
                 break;
 
             case R.id.logout:

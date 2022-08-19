@@ -13,7 +13,7 @@
     <item
         android:title="@string/find_us"
         android:icon="@drawable/ic_items"
-        android:id="@+id/items"
+        android:id="@+id/find_us"
         />
     <item
         android:title="@string/logout"

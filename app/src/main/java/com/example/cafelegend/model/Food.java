@@ -7,12 +7,12 @@ public class Food {
     private int imageId;
     private int foodPrice;
 
-    public Food(String foodId, String foodName, int foodPrice, int imageId, String menuDesc) {
+    public Food(String foodId, String foodName, int foodPrice, int imageId, String foodDesc) {
         this.foodId = foodId;
         this.foodName = foodName;
         this.foodPrice = foodPrice;
         this.imageId = imageId;
-        this.foodDesc = menuDesc;
+        this.foodDesc = foodDesc;
     }
 
     public Food(String foodName, int foodPrice) {
