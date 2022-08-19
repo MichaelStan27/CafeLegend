@@ -71,6 +71,7 @@ public class ItemsRecyclerViewAdapter extends RecyclerView.Adapter<ItemsRecycler
             Intent intent = new Intent(context, FoodDetailActivity.class);
             intent.putExtra("foodName", food.getFoodName());
             intent.putExtra("foodPrice", food.getFoodPrice());
+            intent.putExtra("foodDesc", food.getFoodDesc());
             context.startActivity(intent);
         }
     }

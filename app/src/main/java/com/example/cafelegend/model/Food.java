@@ -26,11 +26,11 @@ public class Food {
         this.imageId = imageId;
     }
 
-    public String getMenuDesc() {
+    public String getFoodDesc() {
         return foodDesc;
     }
 
-    public void setMenuDesc(String foodDesc) {
+    public void setFoodDesc(String foodDesc) {
         this.foodDesc = foodDesc;
     }
 
