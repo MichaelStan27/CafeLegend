@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -60,6 +61,7 @@ public class FoodDetailActivity extends AppCompatActivity {
 
         backBtn.setOnClickListener((v) -> {
             Intent intent = new Intent(this, ItemsActivity.class);
+            intent.putExtra("username", username);
             startActivity(intent);
             finish();
         });
@@ -77,6 +79,7 @@ public class FoodDetailActivity extends AppCompatActivity {
                     Intent items = new Intent(this, ItemsActivity.class);
                     items.putExtra("username", username);
                     startActivity(items);
+                    finish();
                 }
                 else{
                     showDialog("qty must be greater than 0");
