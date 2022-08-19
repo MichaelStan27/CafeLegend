@@ -37,31 +37,32 @@
                 android:textStyle="bold"
                 android:paddingStart="70dp"/>
         </LinearLayout>
-
+        <TextView
+            android:id="@+id/greeting_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textAlignment="center"
+            android:textColor="#634848"
+            android:textStyle="bold|italic"
+            android:textSize="23sp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="130dp"
+            android:layout_marginTop="110dp"
+            android:paddingTop="100dp"
+            android:paddingBottom="200dp"
+            android:background="@drawable/large_pink_rectangle"
             >
-
-            <TextView
-                android:id="@+id/greeting_et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/welcome"
-                android:textAlignment="center"
-                android:textColor="#634848"
-                android:textStyle="bold|italic"
-                android:textSize="23sp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="10dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/border"
-                android:gravity="center"
-                android:layout_gravity="center"
-                />
 
             <RelativeLayout
                 android:layout_width="match_parent"
