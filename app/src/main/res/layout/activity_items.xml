@@ -53,6 +53,9 @@
             android:id="@+id/viewPager2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/large_pink_rectangle"
+            android:layout_marginTop="30dp"
+            android:padding="30dp"
             />
 
     </LinearLayout>
