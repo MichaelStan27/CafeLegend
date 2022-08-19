@@ -3,7 +3,7 @@ package com.example.cafelegend.model;
 public class Food {
     private String foodId;
     private String foodName;
-    private String menuDesc;
+    private String foodDesc;
     private int imageId;
     private int foodPrice;
 
@@ -12,7 +12,7 @@ public class Food {
         this.foodName = foodName;
         this.foodPrice = foodPrice;
         this.imageId = imageId;
-        this.menuDesc = menuDesc;
+        this.foodDesc = menuDesc;
     }
 
     public Food(String foodName, int foodPrice) {
@@ -27,11 +27,11 @@ public class Food {
     }
 
     public String getMenuDesc() {
-        return menuDesc;
+        return foodDesc;
     }
 
-    public void setMenuDesc(String menuDesc) {
-        this.menuDesc = menuDesc;
+    public void setMenuDesc(String foodDesc) {
+        this.foodDesc = foodDesc;
     }
 
     public int getImageId() {

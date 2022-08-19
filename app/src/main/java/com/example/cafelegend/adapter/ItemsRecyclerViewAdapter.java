@@ -1,6 +1,8 @@
 package com.example.cafelegend.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cafelegend.FoodDetailActivity;
 import com.example.cafelegend.HomeActivity;
 import com.example.cafelegend.R;
 import com.example.cafelegend.model.Food;
@@ -49,7 +52,7 @@ public class ItemsRecyclerViewAdapter extends RecyclerView.Adapter<ItemsRecycler
         return foodVector.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvFoodName, tvFoodPrice;
         ImageView ivFoodImg;
 
@@ -59,8 +62,16 @@ public class ItemsRecyclerViewAdapter extends RecyclerView.Adapter<ItemsRecycler
             tvFoodName = itemView.findViewById(R.id.tv_foodName);
             tvFoodPrice = itemView.findViewById(R.id.tv_foodPrice);
             ivFoodImg = itemView.findViewById(R.id.ivFoodImg);
-
+            itemView.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View v) {
+            Food food = foodVector.get(getAdapterPosition());
+            Intent intent = new Intent(context, FoodDetailActivity.class);
+            intent.putExtra("foodName", food.getFoodName());
+            intent.putExtra("foodPrice", food.getFoodPrice());
+            context.startActivity(intent);
+        }
     }
 }
