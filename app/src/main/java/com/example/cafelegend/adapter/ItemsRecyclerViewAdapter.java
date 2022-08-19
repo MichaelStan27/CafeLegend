@@ -75,6 +75,7 @@ public class ItemsRecyclerViewAdapter extends RecyclerView.Adapter<ItemsRecycler
             intent.putExtra("foodPrice", food.getFoodPrice());
             intent.putExtra("foodDesc", food.getFoodDesc());
             intent.putExtra("username", args.getString("username"));
+            intent.putExtra("foodImageID", food.getImageId());
             context.startActivity(intent);
         }
     }

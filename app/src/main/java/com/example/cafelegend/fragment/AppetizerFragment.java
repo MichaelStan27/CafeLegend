@@ -63,9 +63,11 @@ public class AppetizerFragment extends Fragment {
 
     void loadFoodData(){
         foodVector = new Vector<>();
-        foodVector.add(new Food("Appetizer 1", 12000, R.drawable.ic_home));
-        foodVector.add(new Food("Appetizer 2", 15000, R.drawable.ic_home));
-        foodVector.add(new Food("Appetizer 3", 18000, R.drawable.ic_home));
+        foodVector.add(new Food("Neiman Marcus Dip", 23000, R.drawable.neiman, "This Neiman Marcus dip is a delicious alternative to traditional cheese dips. In this dip, the shredded cheese base is complemented with green onions, almonds, mayo, and bacon."));
+        foodVector.add(new Food("Meatball Stuffed Buns", 28000, R.drawable.meatball, "A spin on the traditional meatball, these meatball stuffed buns are warm and filling. For down-home comfort, these stuffed buns are a great choice."));
+        foodVector.add(new Food("Cannoli Dip", 20000, R.drawable.cannoli, "Who says you can’t eat dessert first? This easy cannoli dip is excellent party food."));
+        foodVector.add(new Food("Sweet Potato Bites", 20000, R.drawable.sweetp, "Comprised of just a few simple ingredients, these sweet potato bites with avocado and bacon are a healthier appetizer."));
+        foodVector.add(new Food("Crescent Sausage Bites", 25000, R.drawable.crescent, "With just three ingredients, these semi-homemade crescent sausage bites are simple and always popular at parties."));
     }
 
     @Override

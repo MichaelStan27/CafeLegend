@@ -8,15 +8,17 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FoodDetailActivity extends AppCompatActivity {
 
     TextView foodPriceTV, foodNameTV, foodDescTV;
+    ImageView image;
     EditText qtyET;
     ImageButton backBtn;
     String foodName, foodDesc, username;
-    Integer foodPrice;
+    Integer foodPrice, foodImageID;
     Button buyBtn;
 
     void init(){
@@ -26,12 +28,15 @@ public class FoodDetailActivity extends AppCompatActivity {
         foodNameTV = findViewById(R.id.foodNameTV);
         foodPriceTV = findViewById(R.id.foodPriceTV);
         foodDescTV = findViewById(R.id.foodDescTV);
+        image = findViewById(R.id.image);
 
         Bundle extras = getIntent().getExtras();
         if  (extras != null) {
             foodName = extras.getString("foodName");
             foodPrice = extras.getInt("foodPrice");
             foodDesc = extras.getString("foodDesc");
+            foodImageID = extras.getInt("foodImageID");
+            username = extras.getString("username");
         }
     }
 
@@ -61,20 +66,27 @@ public class FoodDetailActivity extends AppCompatActivity {
 
         buyBtn.setOnClickListener((x) -> {
             Integer qty;
-            qty = Integer.parseInt(qtyET.getText().toString());
-
-            if(qty>0){
-                Intent items = new Intent(this, ItemsActivity.class);
-                items.putExtra("username", username);
-                startActivity(items);
+            String qtyStr = qtyET.getText().toString();
+            if(qtyStr.isEmpty()){
+                showDialog("qty cant be empty");
             }
             else{
-                showDialog("qty must greater than 0");
+                qty = Integer.parseInt(qtyStr);
+
+                if(qty>0){
+                    Intent items = new Intent(this, ItemsActivity.class);
+                    items.putExtra("username", username);
+                    startActivity(items);
+                }
+                else{
+                    showDialog("qty must be greater than 0");
+                }
             }
         });
 
         foodNameTV.setText(foodName);
         foodPriceTV.setText("Rp. " + foodPrice.toString());
         foodDescTV.setText(foodDesc);
+        image.setImageResource(foodImageID);
     }
 }

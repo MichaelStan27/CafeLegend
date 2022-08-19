@@ -63,9 +63,11 @@ public class BeverageFragment extends Fragment {
 
     void loadFoodData(){
         foodVector = new Vector<>();
-        foodVector.add(new Food("Beverage 1", 12000, R.drawable.ic_home));
-        foodVector.add(new Food("Beverage 2", 15000, R.drawable.ic_home));
-        foodVector.add(new Food("Beverage 3", 18000, R.drawable.ic_home));
+        foodVector.add(new Food("Affogato", 30000, R.drawable.affogato_0));
+        foodVector.add(new Food("Americano", 30000, R.drawable.americano));
+        foodVector.add(new Food("Caffé Latte", 25000, R.drawable.cafe_late));
+        foodVector.add(new Food("Caffé Mocha", 27000, R.drawable.cafe_mocha));
+        foodVector.add(new Food("Cappucino", 27000, R.drawable.cappuccino_0));
     }
 
     @Override
